@@ -4,7 +4,7 @@ export default function Articles(props : any) {
     var articlesData = props.articlesData;
 
     return (
-        articlesData.map( (articleData : any) => { 
+        articlesData?.map( (articleData : any) => { 
                 return <Article description={articleData.description} srcImg={articleData.src}/>
             }
         )
