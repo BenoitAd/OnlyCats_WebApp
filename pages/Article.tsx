@@ -12,10 +12,10 @@ export default function Article(props : any) {
         display='block'
         overflow= 'hidden'>
             <Flex p='3px 0 0 60px' min-height='48px' position='relative' m='0 0 14px'>
-                <Flex position="absolute" left="0">
+                <Flex position="absolute" left="-15px" top="-15px">
                 <Image
-                boxSize='40px'
-                src="/logoBen.svg"
+                boxSize='55px'
+                src="/LogoOnlyCats.png"
                 alt="logoOnlyFan"
                 m="12px"
                 />
