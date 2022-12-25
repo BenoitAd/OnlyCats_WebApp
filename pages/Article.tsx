@@ -45,7 +45,7 @@ export default function Article(props : any) {
                     <Text fontFamily="Roboto,sans-serif" fontSize="17px">
                         {description}
                         <br/>
-                        <Link color="blue.300" as={NextLink} href={`{pseudo} ?? ''`}>@{pseudo}</Link>
+                        <Link color="blue.300" as={NextLink} href={pseudo ?? ''}>@{pseudo}</Link>
                     </Text>
 
             </Flex>
