@@ -5,7 +5,8 @@ export default function Articles(props : any) {
 
     return (
         articlesData?.map( (articleData : any) => { 
-                return <Article description={articleData.description} srcImg={articleData.src}/>
+                return <Article description={articleData.description} srcImg={articleData.src}
+                pseudo={articleData.pseudo} date={articleData.date}/>
             }
         )
      )

@@ -1,9 +1,12 @@
 import { Button, Flex, Heading, Input, Text, useColorMode, useColorModeValue, UnorderedList, Link, WrapItem, Image, Box, Spacer, Card } from "@chakra-ui/react";
+import NextLink from 'next/link'
 export default function Article(props : any) {
     const description = props.description;
     const srcImg = props.srcImg;
+    const pseudo = props.pseudo;
+    const date = props.date;
     return (
-        <Flex mt="25px">
+        <Flex mt="50px">
         <Card maxWidth="888px" pb="26px" fontFamily="Roboto,sans-serif">
         <Flex pt='14px' border-radius='6px'
         bg='#fff' box-shadow='0 3px 6px rgb(0 0 0 / 16%)'
@@ -35,20 +38,23 @@ export default function Article(props : any) {
                     <Text fontSize="13px" color="grey">@onlyCats</Text>
                 </Flex>
                 <Flex position="absolute" right="0">
-                    <Text fontSize="15px" color="grey">Hier</Text>
+                    <Text fontSize="15px" color="grey">{date}</Text>
                 </Flex>
             </Flex>
             <Flex pt="6px">
                     <Text fontFamily="Roboto,sans-serif" fontSize="17px">
                         {description}
+                        <br/>
+                        <Link color="blue.300" as={NextLink} href={pseudo}>@{pseudo}</Link>
                     </Text>
+
             </Flex>
 
             <Flex mt="20px">
                 <Image
                     float="left"
                     width="1000px"
-                    height= "600px"
+                    height= "525px"
                     object-fit="cover"
                     src={srcImg}
                     alt="Img"
