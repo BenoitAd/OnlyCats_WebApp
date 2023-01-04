@@ -44,14 +44,14 @@ export default function Index() {
     height="100%"
   >
     <HomePage/>
-    <Flex box-boxSizing="border-box" 
+    <Flex boxSizing="border-box" 
     min-height="300px" p="0" m="0" background-repeat="no-repeat"
     display="block" text-rendering="optimizeLegibility"
     direction="column" justifyContent="center" alignItems="center"
-    border-top='1px solid rgba(138,150,163,.25)' font-family='Roboto,sans-serif'
+    border-top='1px solid rgba(138,150,163,.25)' fontFamily='Roboto,sans-serif'
     fontSize='16px' line-height='1.3334'
     >
-    <Heading fontFamily="Roboto,sans-serif" fontSize= "32px" font-weight='400' mt='36px' line-height= "40px"> Derniers Articles en vedette </Heading>
+    <Heading fontFamily="Roboto,sans-serif" fontSize= "32px" fontWeight='400' mt='36px' line-height= "40px"> Derniers Articles en vedette </Heading>
     <Flex border-top= "1px solid rgba(138,150,163,.25)" display="flex" flexDirection="column">
       <Articles articlesData={articles}/>
     </Flex>
