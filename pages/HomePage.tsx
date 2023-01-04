@@ -11,7 +11,7 @@ export default function HomePage() {
   const formBackGround = useColorModeValue("gray.100", "gray.700")
 
   const handleSignOut = () => {
-    signOut({redirect: false})
+    signOut({redirect: false});
   }
 
 
@@ -49,7 +49,7 @@ export default function HomePage() {
           ( 
           <>
           <Heading mb={6} fontSize="25">You are logged as : <br/> {session.user?.email}</Heading> 
-          <Button mb={6} rounded={20} textColor="white" bg="rgba(138,150,163,.75)" opacity=".4" onClick={() => handleSignOut} >Log out</Button>
+          <Button mb={6} rounded={20} textColor="white" bg="rgba(138,150,163,.75)" opacity=".4" onClick={handleSignOut} >Log out</Button>
           </>
           ) 
           : 
@@ -60,14 +60,14 @@ export default function HomePage() {
           <Input placeholder="*******" variant="filled" mb={6} type="password"/>
           <Button mb={6} rounded={20} textColor="white" bg="rgba(138,150,163,.75)" opacity=".4" onClick={() => signIn}>Log in</Button>
           <Flex textAlign="center" justifyContent="center">
-          <UnorderedList mb="2vh" display="inline-block" textAlign='left'>
-            <Link mr="2vh" color="blue.400">Mot de passe oublié ?</Link>
-            <Link color="blue.400">inscrivez-vous a onlyCats</Link>
+          <UnorderedList mb="2vh" flex-direction="row" display="flex" text-align="justify">
+            <Link mr="5px" color="blue.400" white-space="nowrap">Mot de passe oublié ?</Link>
+            <Link ml="5px" color="blue.400" white-space="nowrap">inscrivez-vous a onlyCats</Link>
           </UnorderedList>
           </Flex>
           <WrapItem mb="2vh" >
 
-            <Button background="#0091ea" width="-moz-available" rounded={20} textColor="white">             
+            <Button display="block" w="100%" background="#0091ea" rounded={20} textColor="white">             
             {/* <Flex position="absolute" left="5">
               <Image
                 boxSize="20px"
@@ -78,10 +78,10 @@ export default function HomePage() {
             SE CONNECTER AVEC TWITTER</Button>
           </WrapItem>
           <WrapItem mb="2vh">
-            <Button background="#4285f4" width="-moz-available" rounded={20} textColor="white" >SE CONNECTER AVEC GOOGLE</Button>
+            <Button display="block" w="100%" background="#4285f4" rounded={20} textColor="white" >SE CONNECTER AVEC GOOGLE</Button>
           </WrapItem>
           <WrapItem mb="2vh">
-            <Button bg="#2f2f2f" width="-moz-available" rounded={20} textColor="white">SE CONNECTER AVEC GITHUB</Button>
+            <Button display="block" w="100%" bg="#2f2f2f" rounded={20} textColor="white">SE CONNECTER AVEC GITHUB</Button>
           </WrapItem>
           </>   
           )
