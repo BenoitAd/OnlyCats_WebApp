@@ -46,8 +46,7 @@ export default function Index() {
     <HomePage/>
     <Flex boxSizing="border-box" 
     min-height="300px" p="0" m="0" background-repeat="no-repeat"
-    display="block" text-rendering="optimizeLegibility"
-    direction="column" justifyContent="center" alignItems="center"
+    display="block" direction="column" justifyContent="center" alignItems="center"
     border-top='1px solid rgba(138,150,163,.25)' fontFamily='Roboto,sans-serif'
     fontSize='16px' line-height='1.3334'
     >

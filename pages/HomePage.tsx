@@ -1,6 +1,6 @@
 import { Button, Flex, Heading, Input, Text, useColorMode, useColorModeValue, UnorderedList, Link, WrapItem, Image, Card } from "@chakra-ui/react";
 import { redirect } from "next/dist/server/api-utils";
-import { useSession, signIn, getProviders } from 'next-auth/react'
+import { useSession, signIn, getProviders, signOut } from 'next-auth/react'
 
 const background = `linear-gradient(90deg,#00aff0 50%,transparent 50.01%)`
 
@@ -9,6 +9,12 @@ export default function HomePage() {
 
   const { toggleColorMode } = useColorMode()
   const formBackGround = useColorModeValue("gray.100", "gray.700")
+
+  const handleSignOut = () => {
+    signOut({redirect: false})
+  }
+
+
   return (
     <Card>
     <Flex height="80vh" alignItems="center"
@@ -40,14 +46,19 @@ export default function HomePage() {
       <Flex justifyContent="center" alignItems="center" height="100vh" width="100vh" mb={130}>
         <Flex direction="column" p={12} rounded={6} >
           { session ? 
-          ( <Heading>You are logged as {session.user?.email}</Heading> ) 
+          ( 
+          <>
+          <Heading mb={6} fontSize="25">You are logged as : <br/> {session.user?.email}</Heading> 
+          <Button mb={6} rounded={20} textColor="white" bg="rgba(138,150,163,.75)" opacity=".4" onClick={() => handleSignOut} >Log out</Button>
+          </>
+          ) 
           : 
           (     
           <>
           <Heading mb={6} fontSize="25">Log in</Heading>
           <Input placeholder="example@email.com" variant="filled" mb={3} type="email" />
           <Input placeholder="*******" variant="filled" mb={6} type="password"/>
-          <Button mb={6} rounded={20} textColor="white" bg="rgba(138,150,163,.75)" opacity=".4" onClick={() => signIn} >Log in</Button>
+          <Button mb={6} rounded={20} textColor="white" bg="rgba(138,150,163,.75)" opacity=".4" onClick={() => signIn}>Log in</Button>
           <Flex textAlign="center" justifyContent="center">
           <UnorderedList mb="2vh" display="inline-block" textAlign='left'>
             <Link mr="2vh" color="blue.400">Mot de passe oublié ?</Link>
