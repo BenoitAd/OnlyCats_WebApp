@@ -47,7 +47,7 @@ export default function HomePage() {
           <Heading mb={6} fontSize="25">Log in</Heading>
           <Input placeholder="example@email.com" variant="filled" mb={3} type="email" />
           <Input placeholder="*******" variant="filled" mb={6} type="password"/>
-          <Button mb={6} rounded={20} textColor="white" bg="rgba(138,150,163,.75)" opacity=".4" onClick={signIn} >Log in</Button>
+          <Button mb={6} rounded={20} textColor="white" bg="rgba(138,150,163,.75)" opacity=".4" onClick={() => signIn} >Log in</Button>
           <Flex textAlign="center" justifyContent="center">
           <UnorderedList mb="2vh" display="inline-block" textAlign='left'>
             <Link mr="2vh" color="blue.400">Mot de passe oublié ?</Link>
